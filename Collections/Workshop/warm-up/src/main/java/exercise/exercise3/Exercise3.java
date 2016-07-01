@@ -61,5 +61,14 @@ public class Exercise3 {
         tree.add(tree.last());
         // TODO Exercise #3 d) and print again the TreeSet. What do you see?
         System.out.println("TreeSet again"+tree.toString());
+
+        TreeSet<String> treeset = new TreeSet<String>(new MyComparator());
+        for( int i=0;i<listToAdd.size();i++){
+            treeset.add(listToAdd.get(i));
+
+        }
+        System.out.println("Tree Sortat");
+        System.out.println(treeset.toString());
+
     }
 }
