@@ -70,8 +70,13 @@ public class MyHashMap {
     }
 
     public Collection<String> values() {
-        // TODO
-        return null;
+        List<String> newColection = new ArrayList<String>();
+        for(LinkedList<MyEntry> elem1 : buckets){
+            for( MyEntry elem2 : elem1){
+                newColection.add(elem2.getValue());
+            }
+        }
+        return newColection;
     }
 
     public String remove(String key) {
@@ -99,6 +104,12 @@ public class MyHashMap {
     }
 
     public int size() {
+        int count = 0;
+        for(LinkedList<MyEntry> elem1 : buckets){
+            for( MyEntry elem2 : elem1){
+                count ++;
+            }
+        }
         // TODO Return the number of the Entry objects stored in all the buckets
         return 0;
     }
