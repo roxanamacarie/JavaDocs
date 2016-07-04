@@ -1,8 +1,6 @@
 package exercise3;
 
-
 import java.util.*;
-
 
 /**
  * Exercise 3. Implement a HashMap from scratch. In order to pass all the tests
@@ -11,30 +9,70 @@ import java.util.*;
  *
  * The buckets list in which each MyEntry object will be stored is stored in "buckets" object.
  */
-public class MyHashMap{
+public class MyHashMap {
 
     private ArrayList<LinkedList<MyEntry>> buckets;
 
     private int capacity;
-//    transient volatile Set<String>        keySet;
-//    transient volatile Collection<String> values;
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        MyHashMap myHashMap = (MyHashMap) o;
+
+        if (capacity != myHashMap.capacity) return false;
+        return buckets != null ? buckets.equals(myHashMap.buckets) : myHashMap.buckets == null;
+
+    }
+
+
+    public int hashCode(String key) {
+
+        return key.hashCode()%capacity;
+    }
+
     public MyHashMap(int capacity) {
         this.capacity = capacity;
+
 
         // Initialize buckets list
         buckets = new ArrayList<LinkedList<MyEntry>>();
         for(Integer i = 0; i < capacity; i++) {
+
             buckets.add(new LinkedList<MyEntry>());
         }
     }
 
     public String get(String key) {
         // TODO
-        return null;
+        String s=null;
+        for(int i=0;i<capacity;i++){
+            LinkedList<MyEntry> l = buckets.get(i);
+            for(int j=0;j<l.size();j++)
+                if(l.get(j).equals(key)){
+                    s=l.get(j).getValue();
+                    break;
+                }
+
+        }
+        return s;
     }
 
     public void put(String key, String value) {
         // TODO
+        int code = hashCode(key);
+        LinkedList<MyEntry> list = buckets.get(code);
+        for (MyEntry entry: list) {
+            if(entry.getKey().equals(key))
+            {
+                entry.setValue(value);
+                break;
+            }
+        }
+        MyEntry newEntry = new MyEntry(key, value);
+        list.add(newEntry);
     }
 
     public Set<String> keySet() {
@@ -47,23 +85,49 @@ public class MyHashMap{
         return set;
     }
 
-
-
-
     public Collection<String> values() {
-        // TODO
-    return null;
-
+        List<String> newColection = new ArrayList<String>();
+        for(LinkedList<MyEntry> elem1 : buckets){
+            for( MyEntry elem2 : elem1){
+                newColection.add(elem2.getValue());
+            }
+        }
+        return newColection;
     }
 
     public String remove(String key) {
         // TODO Returns the value associated with the key removed from the map or null if the key wasn't found
-        return null;
+        int code = hashCode(key);
+        LinkedList<MyEntry> list = buckets.get(code);
+        ListIterator<MyEntry> listIterator = list.listIterator();
+        boolean OK = false;
+        String resultValue = null;
+        while (listIterator.hasNext()) {
+            MyEntry pair = listIterator.next();
+            if(pair.getKey().equals(key)){
+                OK = true;
+                resultValue = pair.getValue();
+                listIterator.remove();
+                break;
+            }
+        }
+        if(!OK)
+            return null;
+        return resultValue;
     }
 
     public boolean containsKey(String key) {
+        boolean found=false;
+        for(int i=0;i<capacity;i++){
+            LinkedList<MyEntry> l = buckets.get(i);
+            for(int j=0;j<l.size();j++)
+                if(hashCode(key)==l.get(j).hashCode()){
+                    found=true;
+                    break;
+                }
 
-        return false;
+        }
+        return found;
     }
 
     public boolean containsValue(String value) {
@@ -72,12 +136,20 @@ public class MyHashMap{
     }
 
     public int size() {
+        int count = 0;
+        for(LinkedList<MyEntry> elem1 : buckets){
+            for( MyEntry elem2 : elem1){
+                count ++;
+            }
+        }
         // TODO Return the number of the Entry objects stored in all the buckets
         return 0;
     }
 
     public void clear() {
         // TODO Remove all the Entry objects from the bucket list
+        for(int i=0;i<capacity;i++)
+            buckets.removeAll(buckets.get(i));
     }
 
     public Set<MyEntry> entrySet() {
