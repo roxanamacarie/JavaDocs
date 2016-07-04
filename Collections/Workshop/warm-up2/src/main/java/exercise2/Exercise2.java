@@ -52,7 +52,7 @@ public class Exercise2 {
         System.out.println("The map of students is: " + studentMapWithoutEqualsAndHashCode);
 
         // TODO Exercise 2 b) After you finished the Exercise 2 a) run the test file and look at the content ofSS
-        // TODO the collections studentSetWithoutEqualsAndHashCode and studentMapWithoutEqualsAndHashCode. What do you notice?
+        // TODO the collections studentSetWithoutEqualsAndHashCode and studentMapWithEqualsAndHashCode. What do you notice?
         // TODO Go to Exercise 2 c) from Student class and implement equals() method
 
         // A Set with elements of type Student without the method hashCode() implemented
