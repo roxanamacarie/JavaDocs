@@ -15,19 +15,50 @@ public class MyHashMap {
 
     private int capacity;
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        MyHashMap myHashMap = (MyHashMap) o;
+
+        if (capacity != myHashMap.capacity) return false;
+        return buckets != null ? buckets.equals(myHashMap.buckets) : myHashMap.buckets == null;
+
+    }
+
+    @Override
+    public int hashCode() {
+        int result = buckets != null ? buckets.hashCode() : 0;
+        result = 31 * result + capacity;
+        return result;
+    }
+
     public MyHashMap(int capacity) {
         this.capacity = capacity;
+
 
         // Initialize buckets list
         buckets = new ArrayList<LinkedList<MyEntry>>();
         for(Integer i = 0; i < capacity; i++) {
+
             buckets.add(new LinkedList<MyEntry>());
         }
     }
 
     public String get(String key) {
         // TODO
-        return null;
+        String s=null;
+        for(int i=0;i<capacity;i++){
+            LinkedList<MyEntry> l = buckets.get(i);
+            for(int j=0;j<l.size();j++)
+                if(l.get(j).equals(key)){
+                    s=l.get(j).getValue();
+                    break;
+                }
+
+        }
+        return s;
     }
 
     public void put(String key, String value) {
