@@ -140,7 +140,7 @@ public class MyHashMap {
                 count ++;
             }
         }
-        // TODO Return the number of the Entry objects stored in all the buckets
+
         return 0;
     }
 
