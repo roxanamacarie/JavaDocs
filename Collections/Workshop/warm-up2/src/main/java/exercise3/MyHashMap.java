@@ -28,11 +28,6 @@ public class MyHashMap {
     }
 
 
-    public int hashCode(String key) {
-
-        return key.hashCode()%capacity;
-    }
-
     public MyHashMap(int capacity) {
         this.capacity = capacity;
 
@@ -131,10 +126,20 @@ public class MyHashMap {
         return found;
     }
 
+
     public boolean containsValue(String value) {
-        // TODO
-        return false;
-    }
+            // TODO
+            boolean check = false;
+            for(int i = 0; i< capacity ; i++)
+            {
+                LinkedList<MyEntry> list = buckets.get(i);
+                for(int j = 0; j < list.size(); j ++ ){
+                    if(list.getFirst().getValue().hashCode() == value.hashCode())
+                        check = true;
+                }
+            }
+            return check;
+        }
 
     public int size() {
         int count = 0;
