@@ -1,6 +1,8 @@
 package exercise3;
 
+
 import java.util.*;
+
 
 /**
  * Exercise 3. Implement a HashMap from scratch. In order to pass all the tests
@@ -9,12 +11,13 @@ import java.util.*;
  *
  * The buckets list in which each MyEntry object will be stored is stored in "buckets" object.
  */
-public class MyHashMap {
+public class MyHashMap{
 
     private ArrayList<LinkedList<MyEntry>> buckets;
 
     private int capacity;
-
+//    transient volatile Set<String>        keySet;
+//    transient volatile Collection<String> values;
     public MyHashMap(int capacity) {
         this.capacity = capacity;
 
@@ -35,18 +38,22 @@ public class MyHashMap {
     }
 
     public Set<String> keySet() {
-        // TODO
-        return null;
-    }
-
-    public Collection<String> values() {
-        List<String> newColection = new ArrayList<String>();
-        for(LinkedList<MyEntry> elem1 : buckets){
-            for( MyEntry elem2 : elem1){
-                newColection.add(elem2.getValue());
+        Set<String> set = new HashSet<String>() ;
+        for(LinkedList<MyEntry> list : buckets){
+            for(MyHashMap.MyEntry entry: list){
+                set.add(entry.getKey());
             }
         }
-        return newColection;
+        return set;
+    }
+
+
+
+
+    public Collection<String> values() {
+        // TODO
+    return null;
+
     }
 
     public String remove(String key) {
@@ -55,7 +62,7 @@ public class MyHashMap {
     }
 
     public boolean containsKey(String key) {
-        // TODO
+
         return false;
     }
 
@@ -65,12 +72,6 @@ public class MyHashMap {
     }
 
     public int size() {
-        int count = 0;
-        for(LinkedList<MyEntry> elem1 : buckets){
-            for( MyEntry elem2 : elem1){
-                count ++;
-            }
-        }
         // TODO Return the number of the Entry objects stored in all the buckets
         return 0;
     }
@@ -81,7 +82,14 @@ public class MyHashMap {
 
     public Set<MyEntry> entrySet() {
         // TODO Return a Set containing all the Entry objects
-        return null;
+        Set<MyEntry> set = new HashSet<MyEntry>();
+        for(LinkedList<MyEntry> bucketList : buckets){
+            for(MyEntry entry : bucketList ){
+                set.add(entry);
+            }
+
+        }
+        return set;
     }
 
     public boolean isEmpty() {
