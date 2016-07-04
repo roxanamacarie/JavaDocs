@@ -1,3 +1,4 @@
+
 package exercise3;
 
 import java.util.*;
@@ -27,6 +28,10 @@ public class MyHashMap {
 
     }
 
+    public int hashCode(String key) {
+        return Math.abs(key.hashCode()) % capacity;
+
+    }
 
 
 
@@ -65,7 +70,7 @@ public class MyHashMap {
             if(entry.getKey().equals(key))
             {
                 entry.setValue(value);
-                break;
+                return;
             }
         }
         MyEntry newEntry = new MyEntry(key, value);
@@ -148,7 +153,6 @@ public class MyHashMap {
                 count ++;
             }
         }
-
         return count;
     }
 
