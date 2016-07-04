@@ -64,7 +64,10 @@ public class MyHashMap {
 
     public void put(String key, String value) {
         // TODO
-        int code = hashCode(key);
+        int code = 0;
+        if(key != null) {
+            code = hashCode(key);
+        }
         LinkedList<MyEntry> list = buckets.get(code);
         for (MyEntry entry: list) {
             if(entry.getKey().equals(key))
@@ -123,7 +126,7 @@ public class MyHashMap {
         for(int i=0;i<capacity;i++){
             LinkedList<MyEntry> l = buckets.get(i);
             for(int j=0;j<l.size();j++)
-                if(hashCode(key)==l.get(j).hashCode()){
+                if(l.get(j).getKey().equals(key)){
                     found=true;
                     break;
                 }
@@ -139,7 +142,7 @@ public class MyHashMap {
             {
                 LinkedList<MyEntry> list = buckets.get(i);
                 for(int j = 0; j < list.size(); j ++ ){
-                    if(list.get(j).getValue().hashCode() == value.hashCode()){
+                    if(list.get(j).getValue().equals(value)){
                         check = true;
                         break;
                     }
@@ -161,10 +164,14 @@ public class MyHashMap {
 
     public void clear() {
 
-        for(int i=0;i<capacity;i++)
-            buckets.removeAll(buckets.get(i));
 
-        capacity=0;
+        for(LinkedList<MyEntry> elem1 : buckets){
+            Iterator<MyEntry> iter = elem1.iterator();
+            while(iter.hasNext()){
+                iter.next();
+                iter.remove();
+            }
+        }
     }
 
     public Set<MyEntry> entrySet() {
@@ -181,11 +188,15 @@ public class MyHashMap {
 
     public boolean isEmpty() {
         // TODO
-        if(buckets.isEmpty())
-            return true;
+        boolean empty=false;
+        for(LinkedList<MyEntry> elem1 : buckets){
+            if(!elem1.isEmpty()) {
+            return  false;
+            }
+            }
+            return  true;
+        }
 
-        return false;
-    }
 
     public static class MyEntry {
         private String key;
