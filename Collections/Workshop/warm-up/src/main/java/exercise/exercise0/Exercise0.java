@@ -51,5 +51,9 @@ public class Exercise0 {
         // TODO Exercise #0 e) Create a new instance of Exercise0 class and call the iterateThroughList() method
         Exercise0 ex0= new Exercise0();
         ex0.iterateThroughList();
+
+        String s1="Pet";
+        String s2="Pet";
+        System.out.println(s1==s2);
     }
 }
