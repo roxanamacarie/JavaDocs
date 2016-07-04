@@ -150,7 +150,7 @@ public class MyHashMap {
             }
         }
 
-        return 0;
+        return count;
     }
 
     public void clear() {
