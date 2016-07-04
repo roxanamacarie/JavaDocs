@@ -1,3 +1,4 @@
+
 package exercise3;
 
 import java.util.*;
@@ -27,6 +28,10 @@ public class MyHashMap {
 
     }
 
+    public int hashCode(String key) {
+        return Math.abs(key.hashCode()) % capacity;
+
+    }
 
 
 
@@ -41,12 +46,6 @@ public class MyHashMap {
             buckets.add(new LinkedList<MyEntry>());
         }
     }
-
-    public int hashCode(String key) {
-        return Math.abs(key.hashCode()) % capacity;
-
-    }
-
 
     public String get(String key) {
         // TODO
@@ -71,7 +70,7 @@ public class MyHashMap {
             if(entry.getKey().equals(key))
             {
                 entry.setValue(value);
-                break;
+                return;
             }
         }
         MyEntry newEntry = new MyEntry(key, value);
@@ -79,8 +78,13 @@ public class MyHashMap {
     }
 
     public Set<String> keySet() {
-        // TODO
-        return null;
+        Set<String> set = new HashSet<String>() ;
+        for(LinkedList<MyEntry> list : buckets){
+            for(MyHashMap.MyEntry entry: list){
+                set.add(entry.getKey());
+            }
+        }
+        return set;
     }
 
     public Collection<String> values() {
@@ -152,7 +156,6 @@ public class MyHashMap {
                 count ++;
             }
         }
-
         return count;
     }
 
@@ -165,7 +168,7 @@ public class MyHashMap {
     }
 
     public Set<MyEntry> entrySet() {
-        Set<MyEntry> entry = new LinkedHashSet<MyEntry>();
+ Set<MyEntry> entry = new LinkedHashSet<MyEntry>();
         for(LinkedList<MyEntry> elem1 : buckets){
             Iterator<MyEntry> iter = elem1.iterator();
             while(iter.hasNext()){

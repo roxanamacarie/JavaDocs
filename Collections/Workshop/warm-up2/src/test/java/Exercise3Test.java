@@ -79,7 +79,7 @@ public class Exercise3Test {
         MyHashMap myHashMap = getMyHashMap();
         Assert.assertTrue("Test remove with nonexistent object", myHashMap.remove("KENYA") == null);
 
-        Assert.assertEquals("Test size", 4, myHashMap.size());
+        Assert.assertEquals("Test size", myHashMap.size(), 4);
     }
 
     @Test
@@ -141,7 +141,8 @@ public class Exercise3Test {
         Assert.assertEquals("Test if expected contains all the entries from MyHashMap", true,
                 expected.entrySet().containsAll(myHashMap.entrySet()));
 
-
+        Assert.assertEquals("Test if MyHashMap contains all the entries from expected", true,
+                myHashMap.entrySet().containsAll(expected.entrySet()));
     }
 
     private MyHashMap getMyHashMap(){
@@ -149,7 +150,7 @@ public class Exercise3Test {
         myHashMap.put("ALGERIA","Algiers");
         myHashMap.put("BENIN","Porto-Novo");
         myHashMap.put("BURKINA FASO","Ouagadougou");
-        myHashMap.put("CHAD","Nï¿½djamena");
+        myHashMap.put("CHAD","N’djamena");
         return myHashMap;
     }
 
@@ -158,7 +159,7 @@ public class Exercise3Test {
         expected.put("ALGERIA","Algiers");
         expected.put("BENIN","Porto-Novo");
         expected.put("BURKINA FASO","Ouagadougou");
-        expected.put("CHAD","Nï¿½djamena");
+        expected.put("CHAD","N’djamena");
         return expected;
     }
 }
