@@ -116,6 +116,8 @@ public class MyHashMap {
 
     public void clear() {
         // TODO Remove all the Entry objects from the bucket list
+        for(int i=0;i<capacity;i++)
+            buckets.removeAll(buckets.get(i));
     }
 
     public Set<MyEntry> entrySet() {
