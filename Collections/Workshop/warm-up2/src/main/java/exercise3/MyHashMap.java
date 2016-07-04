@@ -15,12 +15,32 @@ public class MyHashMap {
 
     private int capacity;
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        MyHashMap myHashMap = (MyHashMap) o;
+
+        if (capacity != myHashMap.capacity) return false;
+        return buckets != null ? buckets.equals(myHashMap.buckets) : myHashMap.buckets == null;
+
+    }
+
+
+    public int hashCode(String key) {
+
+        return key.hashCode()%capacity;
+    }
+
     public MyHashMap(int capacity) {
         this.capacity = capacity;
+
 
         // Initialize buckets list
         buckets = new ArrayList<LinkedList<MyEntry>>();
         for(Integer i = 0; i < capacity; i++) {
+
             buckets.add(new LinkedList<MyEntry>());
         }
     }
@@ -33,7 +53,17 @@ public class MyHashMap {
 
     public String get(String key) {
         // TODO
-        return null;
+        String s=null;
+        for(int i=0;i<capacity;i++){
+            LinkedList<MyEntry> l = buckets.get(i);
+            for(int j=0;j<l.size();j++)
+                if(l.get(j).equals(key)){
+                    s=l.get(j).getValue();
+                    break;
+                }
+
+        }
+        return s;
     }
 
     public void put(String key, String value) {
@@ -57,8 +87,13 @@ public class MyHashMap {
     }
 
     public Collection<String> values() {
-        // TODO
-        return null;
+        List<String> newColection = new ArrayList<String>();
+        for(LinkedList<MyEntry> elem1 : buckets){
+            for( MyEntry elem2 : elem1){
+                newColection.add(elem2.getValue());
+            }
+        }
+        return newColection;
     }
 
     public String remove(String key) {
@@ -83,8 +118,17 @@ public class MyHashMap {
     }
 
     public boolean containsKey(String key) {
-        // TODO
-        return false;
+        boolean found=false;
+        for(int i=0;i<capacity;i++){
+            LinkedList<MyEntry> l = buckets.get(i);
+            for(int j=0;j<l.size();j++)
+                if(hashCode(key)==l.get(j).hashCode()){
+                    found=true;
+                    break;
+                }
+
+        }
+        return found;
     }
 
     public boolean containsValue(String value) {
@@ -93,12 +137,20 @@ public class MyHashMap {
     }
 
     public int size() {
+        int count = 0;
+        for(LinkedList<MyEntry> elem1 : buckets){
+            for( MyEntry elem2 : elem1){
+                count ++;
+            }
+        }
         // TODO Return the number of the Entry objects stored in all the buckets
         return 0;
     }
 
     public void clear() {
         // TODO Remove all the Entry objects from the bucket list
+        for(int i=0;i<capacity;i++)
+            buckets.removeAll(buckets.get(i));
     }
 
     public Set<MyEntry> entrySet() {
