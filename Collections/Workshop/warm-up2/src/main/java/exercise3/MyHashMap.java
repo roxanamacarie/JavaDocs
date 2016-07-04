@@ -25,6 +25,12 @@ public class MyHashMap {
         }
     }
 
+    public int hashCode(String key) {
+        return Math.abs(key.hashCode()) % capacity;
+
+    }
+
+
     public String get(String key) {
         // TODO
         return null;
@@ -32,6 +38,17 @@ public class MyHashMap {
 
     public void put(String key, String value) {
         // TODO
+        int code = hashCode(key);
+        LinkedList<MyEntry> list = buckets.get(code);
+        for (MyEntry entry: list) {
+            if(entry.getKey().equals(key))
+            {
+                entry.setValue(value);
+                break;
+            }
+        }
+        MyEntry newEntry = new MyEntry(key, value);
+        list.add(newEntry);
     }
 
     public Set<String> keySet() {
@@ -46,7 +63,23 @@ public class MyHashMap {
 
     public String remove(String key) {
         // TODO Returns the value associated with the key removed from the map or null if the key wasn't found
-        return null;
+        int code = hashCode(key);
+        LinkedList<MyEntry> list = buckets.get(code);
+        ListIterator<MyEntry> listIterator = list.listIterator();
+        boolean OK = false;
+        String resultValue = null;
+        while (listIterator.hasNext()) {
+            MyEntry pair = listIterator.next();
+            if(pair.getKey().equals(key)){
+                OK = true;
+                resultValue = pair.getValue();
+                listIterator.remove();
+                break;
+            }
+        }
+        if(!OK)
+            return null;
+        return resultValue;
     }
 
     public boolean containsKey(String key) {
