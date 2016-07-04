@@ -28,10 +28,7 @@ public class MyHashMap {
     }
 
 
-    public int hashCode(String key) {
 
-        return key.hashCode()%capacity;
-    }
 
     public MyHashMap(int capacity) {
         this.capacity = capacity;
