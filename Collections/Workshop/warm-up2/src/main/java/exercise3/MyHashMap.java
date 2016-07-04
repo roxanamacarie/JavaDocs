@@ -27,11 +27,10 @@ public class MyHashMap {
 
     }
 
-    @Override
-    public int hashCode() {
-        int result = buckets != null ? buckets.hashCode() : 0;
-        result = 31 * result + capacity;
-        return result;
+
+    public int hashCode(String key) {
+
+        return key.hashCode()%capacity;
     }
 
     public MyHashMap(int capacity) {
@@ -81,8 +80,17 @@ public class MyHashMap {
     }
 
     public boolean containsKey(String key) {
-        // TODO
-        return false;
+        boolean found=false;
+        for(int i=0;i<capacity;i++){
+            LinkedList<MyEntry> l = buckets.get(i);
+            for(int j=0;j<l.size();j++)
+                if(hashCode(key)==l.get(j).hashCode()){
+                    found=true;
+                    break;
+                }
+
+        }
+        return found;
     }
 
     public boolean containsValue(String value) {
