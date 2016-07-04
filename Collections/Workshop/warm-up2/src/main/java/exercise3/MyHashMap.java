@@ -54,7 +54,7 @@ public class MyHashMap {
         for(int i=0;i<capacity;i++){
             LinkedList<MyEntry> l = buckets.get(i);
             for(int j=0;j<l.size();j++)
-                if(l.get(j).equals(key)){
+                if(l.get(j).getKey().equals(key)){
                     s=l.get(j).getValue();
                     break;
                 }
@@ -135,8 +135,11 @@ public class MyHashMap {
             {
                 LinkedList<MyEntry> list = buckets.get(i);
                 for(int j = 0; j < list.size(); j ++ ){
-                    if(list.getFirst().getValue().hashCode() == value.hashCode())
+                    if(list.get(j).getValue().hashCode() == value.hashCode()){
                         check = true;
+                        break;
+                    }
+
                 }
             }
             return check;
@@ -155,12 +158,10 @@ public class MyHashMap {
 
     public void clear() {
 
-        for(LinkedList<MyEntry> elem1 : buckets){
-            Iterator<MyEntry> iter = elem1.iterator();
-            while(iter.hasNext()){
-                iter.remove();
-            }
-        }
+        for(int i=0;i<capacity;i++)
+            buckets.removeAll(buckets.get(i));
+
+        capacity=0;
     }
 
     public Set<MyEntry> entrySet() {
@@ -177,6 +178,9 @@ public class MyHashMap {
 
     public boolean isEmpty() {
         // TODO
+        if(buckets.isEmpty())
+            return true;
+
         return false;
     }
 
