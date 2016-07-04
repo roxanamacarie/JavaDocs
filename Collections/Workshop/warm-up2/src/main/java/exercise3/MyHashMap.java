@@ -154,14 +154,25 @@ public class MyHashMap {
     }
 
     public void clear() {
-        // TODO Remove all the Entry objects from the bucket list
-        for(int i=0;i<capacity;i++)
-            buckets.removeAll(buckets.get(i));
+
+        for(LinkedList<MyEntry> elem1 : buckets){
+            Iterator<MyEntry> iter = elem1.iterator();
+            while(iter.hasNext()){
+                iter.remove();
+            }
+        }
     }
 
     public Set<MyEntry> entrySet() {
-        // TODO Return a Set containing all the Entry objects
-        return null;
+        Set<MyEntry> entry = new LinkedHashSet<MyEntry>();
+        for(LinkedList<MyEntry> elem1 : buckets){
+            Iterator<MyEntry> iter = elem1.iterator();
+            while(iter.hasNext()){
+                entry.add(iter.next());
+            }
+        }
+
+        return entry;
     }
 
     public boolean isEmpty() {
