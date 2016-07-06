@@ -1,28 +1,28 @@
-CREATE USER sdecianu IDENTIFIED BY sdecianu; -- you should replace my user name with yours. “IDENTIFIED BY” means the password.
-GRANT CREATE SESSION TO sdecianu; -- necessary for connecting to the database with your new user.
-GRANT CREATE ANY INDEX TO sdecianu; -- we use indexes for faster queries.
-GRANT ALTER ANY INDEX TO sdecianu;
-GRANT DROP ANY INDEX TO sdecianu;
-GRANT CREATE ANY PROCEDURE TO sdecianu; -- we will use them in following workshops.
-GRANT ALTER ANY PROCEDURE TO sdecianu;
-GRANT DROP ANY PROCEDURE TO sdecianu;
-GRANT EXECUTE ANY PROCEDURE TO sdecianu;
-GRANT CREATE ANY SEQUENCE TO sdecianu; -- we need sequences for inserting data.
-GRANT ALTER ANY SEQUENCE TO sdecianu;
-GRANT DROP ANY SEQUENCE TO sdecianu;
-GRANT SELECT ANY SEQUENCE TO sdecianu;
-GRANT CREATE ANY TABLE TO sdecianu;
-GRANT ALTER ANY TABLE TO sdecianu;
-GRANT DELETE ANY TABLE TO sdecianu;
-GRANT DROP ANY TABLE TO sdecianu;
-GRANT INSERT ANY TABLE TO sdecianu;
-GRANT LOCK ANY TABLE TO sdecianu;
-GRANT SELECT ANY TABLE TO sdecianu;
-GRANT UPDATE ANY TABLE TO sdecianu;
-GRANT CREATE TABLESPACE TO sdecianu;
-GRANT ALTER TABLESPACE TO sdecianu;
-GRANT DROP TABLESPACE TO sdecianu;
-GRANT CREATE ANY VIEW TO sdecianu;
-GRANT DROP ANY VIEW TO sdecianu;
-GRANT UNDER ANY VIEW TO sdecianu;
-alter user sdecianu quota 50m on system;
+CREATE USER RoxanaM IDENTIFIED BY RoxanaM; -- you should replace my user name with yours. “IDENTIFIED BY�? means the password.
+GRANT CREATE SESSION TO RoxanaM; -- necessary for connecting to the database with your new user.
+GRANT CREATE ANY INDEX TO RoxanaM; -- we use indexes for faster queries.
+GRANT ALTER ANY INDEX TO RoxanaM;
+GRANT DROP ANY INDEX TO RoxanaM;
+GRANT CREATE ANY PROCEDURE TO RoxanaM; -- we will use them in following workshops.
+GRANT ALTER ANY PROCEDURE TO RoxanaM;
+GRANT DROP ANY PROCEDURE TO RoxanaM;
+GRANT EXECUTE ANY PROCEDURE TO RoxanaM;
+GRANT CREATE ANY SEQUENCE TO RoxanaM; -- we need sequences for inserting data.
+GRANT ALTER ANY SEQUENCE TO RoxanaM;
+GRANT DROP ANY SEQUENCE TO RoxanaM;
+GRANT SELECT ANY SEQUENCE TO RoxanaM;
+GRANT CREATE ANY TABLE TO RoxanaM;
+GRANT ALTER ANY TABLE TO RoxanaM;
+GRANT DELETE ANY TABLE TO RoxanaM;
+GRANT DROP ANY TABLE TO RoxanaM;
+GRANT INSERT ANY TABLE TO RoxanaM;
+GRANT LOCK ANY TABLE TO RoxanaM;
+GRANT SELECT ANY TABLE TO RoxanaM;
+GRANT UPDATE ANY TABLE TO RoxanaM;
+GRANT CREATE TABLESPACE TO RoxanaM;
+GRANT ALTER TABLESPACE TO RoxanaM;
+GRANT DROP TABLESPACE TO RoxanaM;
+GRANT CREATE ANY VIEW TO RoxanaM;
+GRANT DROP ANY VIEW TO RoxanaM;
+GRANT UNDER ANY VIEW TO RoxanaM;
+alter user RoxanaM quota 50m on system;
