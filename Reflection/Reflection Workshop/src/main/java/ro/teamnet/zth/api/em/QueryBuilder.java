@@ -151,7 +151,7 @@ public class QueryBuilder {
     private String createInsertQuery() {
         StringBuilder sql = new StringBuilder();
         sql.append("insert into ").append(tableName).append(" (");
-        StringBuilder sqlValues = new StringBuilder(" values (");
+        StringBuilder sqlValues = new StringBuilder("values (");
         boolean first = true;
         for (ColumnInfo columnInfo : queryColumns) {
             if (columnInfo.isId()) {
