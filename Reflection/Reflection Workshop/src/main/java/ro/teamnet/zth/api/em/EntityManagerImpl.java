@@ -91,33 +91,39 @@ public class EntityManagerImpl implements EntityManager {
     public <T> T insert(T entity) throws NoSuchFieldException, SQLException, ClassNotFoundException {
         String tableName = EntityUtils.getTableName(entity.getClass());
         List<ColumnInfo> columnList = new ArrayList<ColumnInfo>();
-        columnList = getColumns(entity.getClass());
+        columnList = EntityUtils.getColumns(entity.getClass());
         QueryBuilder query = new QueryBuilder();
         Connection connection = DBManager.getConnection();
+        int Id =0;
         try{
-            int Id = 0;
+
             for(ColumnInfo cinfo : columnList){
                 if(cinfo.isId() ){
+                    cinfo.setValue(getNextIdVal(tableName,cinfo.getDbName()));
                     Id =getNextIdVal(tableName,cinfo.getDbName());
-                    //cinfo.setId(true);
+
                 }
                 else{
-                 //  entity.getClass().getDeclaredField(cinfo.getColumnName());
+                    //  entity.getClass().getDeclaredField(cinfo.getColumnName());
 
-                Field fild = entity.getClass().getDeclaredField(cinfo.getColumnName());
-                fild.setAccessible(true);
-                cinfo.setValue(fild.get(entity));}
+                    Field field = entity.getClass().getDeclaredField(cinfo.getColumnName());
+                    field.setAccessible(true);
+                    cinfo.setValue(field.get(entity));}
             }
+//            query.s
+
             query.setTableName(tableName);
             query.addQueryColumns(columnList);
             query.setQueryType(QueryType.INSERT);
             String queryString = query.createQuery();
+
             System.out.println(queryString);
             Statement statement = connection.createStatement();
-//            System.out.println(queryString);
-            statement.executeUpdate(queryString);
+
+            statement.execute(queryString);
 
             return (T) findById(entity.getClass(),Id);
+
 
         }
         catch (SQLException sqlE){
@@ -130,6 +136,7 @@ public class EntityManagerImpl implements EntityManager {
         }
         return null;
     }
+
 
     @Override
     public <T> List<T> findAll(Class<T> entityClass) throws SQLException {

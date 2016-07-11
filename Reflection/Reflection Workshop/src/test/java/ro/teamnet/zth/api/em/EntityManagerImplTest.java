@@ -49,6 +49,9 @@ public class EntityManagerImplTest {
         Department dep= new Department();
         EntityManagerImpl e = new EntityManagerImpl();
         EntityManager entity;
+        dep.setId(e.getNextIdVal("departments","DEPARTMENT_ID"));
+        dep.setDepartmentName("Sales");
+        dep.setLocations(1700);
         try {
             dep = e.insert(dep);
         } catch (Exception e1) {
