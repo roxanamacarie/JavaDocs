@@ -85,4 +85,17 @@ public class EntityUtils {
         }
         return fields;
     }
+    public static Object getSqlValue(Object object) throws IllegalAccessException {
+        if(object == null) {
+            return null;
+        }
+        if(object.getClass().getAnnotation(Table.class) != null) {
+            Field idField = getFieldsByAnnotations(object.getClass(), Id.class).get(0);
+            idField.setAccessible(true);
+            return idField.get(object);
+        } else {
+            return object;
+        }
+    }
+
 }

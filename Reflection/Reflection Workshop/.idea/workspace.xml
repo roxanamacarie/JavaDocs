@@ -36,14 +36,11 @@
   <component name="FileEditorManager">
     <leaf>
       <file leaf-file-name="EntityManagerImpl.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ro/teamnet/zth/api/em/EntityManagerImpl.java">
+        <entry file="file://$PROJECT_DIR$/../../../../../Jdbc/src/main/java/ro/teamnet/zth/api/em/EntityManagerImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="709">
-              <caret line="122" column="0" selection-start-line="122" selection-start-column="0" selection-end-line="122" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#3467#3479#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -68,17 +65,22 @@
       <list>
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/b767523d-ec0c-419b-abf8-d27adb19fb74/console.sql" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/test/java/ro/teamnet/zth/appl/LocationDaoTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ro/teamnet/zth/api/em/EntityUtils.java" />
         <option value="$PROJECT_DIR$/src/test/java/ro/teamnet/zth/api/em/EntityUtilsTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/ro/teamnet/zth/appl/domain/Job.java" />
         <option value="$PROJECT_DIR$/src/main/java/ro/teamnet/zth/api/database/DBProperties.java" />
         <option value="$PROJECT_DIR$/src/test/java/ro/teamnet/zth/api/database/DBManagerTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/ro/teamnet/zth/api/database/DBManager.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ro/teamnet/zth/api/em/QueryBuilder.java" />
+        <option value="$PROJECT_DIR$/src/test/java/ro/teamnet/zth/appl/DepartmentDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ro/teamnet/zth/appl/dao/LocationDao.java" />
+        <option value="$PROJECT_DIR$/src/test/java/ro/teamnet/zth/appl/LocationDaoTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ro/teamnet/zth/api/em/EntityUtils.java" />
         <option value="$PROJECT_DIR$/src/main/java/ro/teamnet/zth/api/em/EntityManager.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ro/teamnet/zth/appl/domain/Employee.java" />
         <option value="$PROJECT_DIR$/src/test/java/ro/teamnet/zth/api/em/EntityManagerImplTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/ro/teamnet/zth/api/em/EntityManagerImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ro/teamnet/zth/api/em/QueryBuilder.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ro/teamnet/zth/appl/dao/DepartmentDao.java" />
+        <option value="$PROJECT_DIR$/src/test/java/ro/teamnet/zth/appl/DepartmentDaoTest.java" />
       </list>
     </option>
   </component>
@@ -176,6 +178,44 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Reflection Workshop" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Reflection Workshop" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Reflection Workshop" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ro" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="teamnet" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zth" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="appl" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -339,11 +379,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="api" />
+              <option name="myItemId" value="appl" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="em" />
+              <option name="myItemId" value="dao" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -385,7 +425,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="database" />
+              <option name="myItemId" value="em" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -438,7 +478,7 @@
     <property name="settings.editor.selected.configurable" value="preferences.editor" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/ojdbc6-11.2.0.2.0.jar!/" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../../Jdbc" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="dynamic.classpath" value="false" />
     <property name="recentsLimit" value="5" />
@@ -446,59 +486,7 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
-  <component name="RunManager" selected="JUnit.EntityManagerImplTest">
-    <configuration default="false" name="DBManagerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="ro.teamnet.zth.api.database.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="ZTH" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="ro.teamnet.zth.api.database" />
-      <option name="MAIN_CLASS_NAME" value="ro.teamnet.zth.api.database.DBManagerTest" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="false" name="DBManagerTest.testcheckConnection" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="ro.teamnet.zth.api.database.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="ZTH" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="ro.teamnet.zth.api.database" />
-      <option name="MAIN_CLASS_NAME" value="ro.teamnet.zth.api.database.DBManagerTest" />
-      <option name="METHOD_NAME" value="testcheckConnection" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="JUnit.DepartmentDaoTest">
     <configuration default="false" name="EntityManagerImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -525,7 +513,33 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="false" name="EntityManagerImplTest.testFindAll" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="DepartmentDaoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="ro.teamnet.zth.appl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="ZTH" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="ro.teamnet.zth.appl" />
+      <option name="MAIN_CLASS_NAME" value="ro.teamnet.zth.appl.DepartmentDaoTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="EntityManagerImplTest.testFindById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="ro.teamnet.zth.api.em.*" />
@@ -537,7 +551,7 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="ro.teamnet.zth.api.em" />
       <option name="MAIN_CLASS_NAME" value="ro.teamnet.zth.api.em.EntityManagerImplTest" />
-      <option name="METHOD_NAME" value="testFindAll" />
+      <option name="METHOD_NAME" value="testFindById" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -551,7 +565,33 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="false" name="EntityManagerImplTest.testinsert" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="LocationDaoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="ro.teamnet.zth.appl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="ZTH" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="ro.teamnet.zth.appl" />
+      <option name="MAIN_CLASS_NAME" value="ro.teamnet.zth.appl.LocationDaoTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="EntityManagerImplTest.testDelete" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="ro.teamnet.zth.api.em.*" />
@@ -563,7 +603,7 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="ro.teamnet.zth.api.em" />
       <option name="MAIN_CLASS_NAME" value="ro.teamnet.zth.api.em.EntityManagerImplTest" />
-      <option name="METHOD_NAME" value="testinsert" />
+      <option name="METHOD_NAME" value="testDelete" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -811,19 +851,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="JUnit.DBManagerTest" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.DBManagerTest.testcheckConnection" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.EntityManagerImplTest" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.EntityManagerImplTest.testFindAll" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.EntityManagerImplTest.testinsert" />
+      <item index="0" class="java.lang.String" itemvalue="JUnit.EntityManagerImplTest" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.DepartmentDaoTest" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.EntityManagerImplTest.testFindById" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.LocationDaoTest" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.EntityManagerImplTest.testDelete" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.EntityManagerImplTest" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.EntityManagerImplTest.testinsert" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.EntityManagerImplTest.testFindAll" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.DBManagerTest" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.DBManagerTest.testcheckConnection" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.DepartmentDaoTest" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.EntityManagerImplTest" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.EntityManagerImplTest.testDelete" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.LocationDaoTest" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.EntityManagerImplTest.testFindById" />
       </list>
     </recent_temporary>
   </component>
@@ -853,35 +893,35 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="EntityManagerImplTest - 2016.07.11 at 09h 28m 15s.xml">
-      <configuration name="EntityManagerImplTest" configurationId="JUnit" />
+    <history-entry file="DepartmentDaoTest - 2016.07.11 at 12h 26m 00s.xml">
+      <configuration name="DepartmentDaoTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="EntityManagerImplTest - 2016.07.11 at 09h 30m 03s.xml">
-      <configuration name="EntityManagerImplTest" configurationId="JUnit" />
+    <history-entry file="DepartmentDaoTest - 2016.07.11 at 12h 26m 45s.xml">
+      <configuration name="DepartmentDaoTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="EntityManagerImplTest - 2016.07.11 at 09h 30m 29s.xml">
-      <configuration name="EntityManagerImplTest" configurationId="JUnit" />
+    <history-entry file="DepartmentDaoTest - 2016.07.11 at 12h 28m 57s.xml">
+      <configuration name="DepartmentDaoTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="EntityManagerImplTest - 2016.07.11 at 09h 30m 46s.xml">
-      <configuration name="EntityManagerImplTest" configurationId="JUnit" />
+    <history-entry file="DepartmentDaoTest - 2016.07.11 at 12h 29m 32s.xml">
+      <configuration name="DepartmentDaoTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="EntityManagerImplTest - 2016.07.11 at 09h 31m 52s.xml">
-      <configuration name="EntityManagerImplTest" configurationId="JUnit" />
+    <history-entry file="DepartmentDaoTest - 2016.07.11 at 12h 30m 00s.xml">
+      <configuration name="DepartmentDaoTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="EntityManagerImplTest - 2016.07.11 at 09h 32m 32s.xml">
-      <configuration name="EntityManagerImplTest" configurationId="JUnit" />
+    <history-entry file="DepartmentDaoTest - 2016.07.11 at 12h 30m 16s.xml">
+      <configuration name="DepartmentDaoTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="EntityManagerImplTest - 2016.07.11 at 09h 42m 48s.xml">
-      <configuration name="EntityManagerImplTest" configurationId="JUnit" />
+    <history-entry file="DepartmentDaoTest - 2016.07.11 at 12h 30m 39s.xml">
+      <configuration name="DepartmentDaoTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="EntityManagerImplTest - 2016.07.11 at 09h 44m 58s.xml">
-      <configuration name="EntityManagerImplTest" configurationId="JUnit" />
+    <history-entry file="DepartmentDaoTest - 2016.07.11 at 12h 31m 03s.xml">
+      <configuration name="DepartmentDaoTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="EntityManagerImplTest_testinsert - 2016.07.11 at 09h 25m 52s.xml">
-      <configuration name="EntityManagerImplTest.testinsert" configurationId="JUnit" />
+    <history-entry file="DepartmentDaoTest - 2016.07.11 at 12h 31m 23s.xml">
+      <configuration name="DepartmentDaoTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="EntityManagerImplTest_testinsert - 2016.07.11 at 09h 28m 05s.xml">
-      <configuration name="EntityManagerImplTest.testinsert" configurationId="JUnit" />
+    <history-entry file="DepartmentDaoTest - 2016.07.11 at 12h 31m 43s.xml">
+      <configuration name="DepartmentDaoTest" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
@@ -889,7 +929,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -899,7 +939,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18277946" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35756156" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35756156" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -933,7 +973,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="22" />
+      <option name="time" value="23" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -991,13 +1031,14 @@
         <state relative-caret-position="1408">
           <caret line="72" column="0" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
           <folding>
-            <marker date="1467993980495" expanded="false" signature="39:276" ph="..." />
-            <marker date="1467993980495" expanded="false" signature="500:511" ph=" { " />
-            <marker date="1467993980495" expanded="false" signature="553:559" ph=" }" />
-            <marker date="1467993980495" expanded="true" signature="682:885" ph="{...}" />
-            <marker date="1467993980495" expanded="true" signature="1056:1769" ph="{...}" />
-            <marker date="1467993980495" expanded="true" signature="1972:2532" ph="{...}" />
-            <marker date="1467993980495" expanded="true" signature="2744:3067" ph="{...}" />
+            <marker date="1468263249633" expanded="false" signature="39:276" ph="..." />
+            <marker date="1468263249633" expanded="false" signature="500:511" ph=" { " />
+            <marker date="1468263249633" expanded="false" signature="553:559" ph=" }" />
+            <marker date="1468263249633" expanded="true" signature="682:885" ph="{...}" />
+            <marker date="1468263249633" expanded="true" signature="1056:1769" ph="{...}" />
+            <marker date="1468263249633" expanded="true" signature="1972:2532" ph="{...}" />
+            <marker date="1468263249633" expanded="true" signature="2744:3067" ph="{...}" />
+            <marker date="1468263249633" expanded="true" signature="3150:3511" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -1053,13 +1094,14 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1467993980495" expanded="false" signature="39:276" ph="..." />
-            <marker date="1467993980495" expanded="false" signature="500:511" ph=" { " />
-            <marker date="1467993980495" expanded="false" signature="553:559" ph=" }" />
-            <marker date="1467993980495" expanded="true" signature="682:885" ph="{...}" />
-            <marker date="1467993980495" expanded="true" signature="1056:1769" ph="{...}" />
-            <marker date="1467993980495" expanded="true" signature="1972:2532" ph="{...}" />
-            <marker date="1467993980495" expanded="true" signature="2744:3067" ph="{...}" />
+            <marker date="1468263249633" expanded="false" signature="39:276" ph="..." />
+            <marker date="1468263249633" expanded="false" signature="500:511" ph=" { " />
+            <marker date="1468263249633" expanded="false" signature="553:559" ph=" }" />
+            <marker date="1468263249633" expanded="true" signature="682:885" ph="{...}" />
+            <marker date="1468263249633" expanded="true" signature="1056:1769" ph="{...}" />
+            <marker date="1468263249633" expanded="true" signature="1972:2532" ph="{...}" />
+            <marker date="1468263249633" expanded="true" signature="2744:3067" ph="{...}" />
+            <marker date="1468263249633" expanded="true" signature="3150:3511" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -1113,13 +1155,14 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1467993980495" expanded="false" signature="39:276" ph="..." />
-            <marker date="1467993980495" expanded="false" signature="500:511" ph=" { " />
-            <marker date="1467993980495" expanded="false" signature="553:559" ph=" }" />
-            <marker date="1467993980495" expanded="true" signature="682:885" ph="{...}" />
-            <marker date="1467993980495" expanded="true" signature="1056:1769" ph="{...}" />
-            <marker date="1467993980495" expanded="true" signature="1972:2532" ph="{...}" />
-            <marker date="1467993980495" expanded="true" signature="2744:3067" ph="{...}" />
+            <marker date="1468263249633" expanded="false" signature="39:276" ph="..." />
+            <marker date="1468263249633" expanded="false" signature="500:511" ph=" { " />
+            <marker date="1468263249633" expanded="false" signature="553:559" ph=" }" />
+            <marker date="1468263249633" expanded="true" signature="682:885" ph="{...}" />
+            <marker date="1468263249633" expanded="true" signature="1056:1769" ph="{...}" />
+            <marker date="1468263249633" expanded="true" signature="1972:2532" ph="{...}" />
+            <marker date="1468263249633" expanded="true" signature="2744:3067" ph="{...}" />
+            <marker date="1468263249633" expanded="true" signature="3150:3511" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -1208,20 +1251,6 @@
             <marker date="1468005209609" expanded="true" signature="710:845" ph="{...}" />
             <marker date="1468005209609" expanded="true" signature="911:1465" ph="{...}" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/ro/teamnet/zth/api/database/DBManagerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ro/teamnet/zth/api/em/EntityManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="9" column="48" selection-start-line="9" selection-start-column="48" selection-end-line="9" selection-end-column="48" />
         </state>
       </provider>
     </entry>
@@ -1605,53 +1634,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ro/teamnet/zth/api/em/EntityUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1163">
-          <caret line="72" column="0" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
-          <folding>
-            <marker date="1467993980495" expanded="false" signature="39:276" ph="..." />
-            <marker date="1467993980495" expanded="false" signature="500:511" ph=" { " />
-            <marker date="1467993980495" expanded="false" signature="553:559" ph=" }" />
-            <marker date="1467993980495" expanded="true" signature="682:885" ph="{...}" />
-            <marker date="1467993980495" expanded="true" signature="1056:1769" ph="{...}" />
-            <marker date="1467993980495" expanded="true" signature="1972:2532" ph="{...}" />
-            <marker date="1467993980495" expanded="true" signature="2744:3067" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/ro/teamnet/zth/api/em/EntityUtilsTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="239">
-          <caret line="20" column="5" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
-          <folding>
-            <marker date="1467993981995" expanded="false" signature="39:214" ph="..." />
-            <marker date="1467993981995" expanded="true" signature="299:462" ph="{...}" />
-            <marker date="1467993981995" expanded="true" signature="513:638" ph="{...}" />
-            <marker date="1467993981995" expanded="true" signature="723:830" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/ro/teamnet/zth/api/em/EntityManagerImplTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="302">
-          <caret line="53" column="29" selection-start-line="53" selection-start-column="29" selection-end-line="53" selection-end-column="29" />
-          <folding>
-            <marker date="1468254346921" expanded="true" signature="39:293" ph="..." />
-            <marker date="1468254346921" expanded="true" signature="295:334" ph="/**...*/" />
-            <marker date="1468254346921" expanded="true" signature="458:666" ph="{...}" />
-            <marker date="1468254346921" expanded="true" signature="753:968" ph="{...}" />
-            <marker date="1468254346921" expanded="true" signature="1059:1299" ph="{...}" />
-            <marker date="1468254346921" expanded="true" signature="1384:1826" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ro/teamnet/zth/api/em/QueryBuilder.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
+        <state relative-caret-position="137">
           <caret line="156" column="14" selection-start-line="156" selection-start-column="14" selection-end-line="156" selection-end-column="14" />
           <folding>
             <marker date="1468255448777" expanded="false" signature="39:137" ph="..." />
@@ -1671,14 +1656,234 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ro/teamnet/zth/api/database/DBManagerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="23" column="11" selection-start-line="23" selection-start-column="11" selection-end-line="23" selection-end-column="76" />
+          <folding>
+            <marker date="1468004312799" expanded="true" signature="45:253" ph="..." />
+            <marker date="1468004312799" expanded="true" signature="255:294" ph="/**...*/" />
+            <marker date="1468004312799" expanded="true" signature="371:889" ph="{...}" />
+            <marker date="1468004312799" expanded="true" signature="939:1414" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ro/teamnet/zth/appl/dao/LocationDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="415">
+          <caret line="51" column="3" selection-start-line="51" selection-start-column="3" selection-end-line="54" selection-end-column="5" />
+          <folding>
+            <marker date="1468262063762" expanded="true" signature="41:290" ph="..." />
+            <marker date="1468262063762" expanded="true" signature="292:332" ph="/**...*/" />
+            <marker date="1468262063762" expanded="true" signature="490:497" ph="{...}" />
+            <marker date="1468262063762" expanded="true" signature="543:604" ph="{...}" />
+            <marker date="1468262063762" expanded="true" signature="708:808" ph="{...}" />
+            <marker date="1468262063762" expanded="true" signature="925:1105" ph="{...}" />
+            <marker date="1468262063762" expanded="true" signature="1172:1269" ph="{...}" />
+            <marker date="1468262063762" expanded="true" signature="1401:1517" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ro/teamnet/zth/appl/LocationDaoTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="107">
+          <caret line="109" column="43" selection-start-line="109" selection-start-column="43" selection-end-line="109" selection-end-column="43" />
+          <folding>
+            <marker date="1468262383870" expanded="true" signature="37:613" ph="..." />
+            <marker date="1468262383870" expanded="true" signature="615:655" ph="/**...*/" />
+            <marker date="1468262383870" expanded="true" signature="772:1226" ph="{...}" />
+            <marker date="1468262383870" expanded="true" signature="1316:1752" ph="{...}" />
+            <marker date="1468262383870" expanded="true" signature="1592:1680" ph="//..." />
+            <marker date="1468262383870" expanded="true" signature="1858:2673" ph="{...}" />
+            <marker date="1468262383870" expanded="true" signature="3394:3817" ph="{...}" />
+            <marker date="1468262383870" expanded="true" signature="3929:4399" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ro/teamnet/zth/api/em/EntityManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="17" column="27" selection-start-line="17" selection-start-column="27" selection-end-line="17" selection-end-column="27" />
+          <folding>
+            <marker date="1468263788724" expanded="false" signature="39:106" ph="..." />
+            <marker date="1468263788724" expanded="true" signature="108:147" ph="/**...*/" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ro/teamnet/zth/api/em/EntityUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="503">
+          <caret line="98" column="5" selection-start-line="98" selection-start-column="5" selection-end-line="98" selection-end-column="5" />
+          <folding>
+            <marker date="1468263249633" expanded="false" signature="39:276" ph="..." />
+            <marker date="1468263249633" expanded="false" signature="500:511" ph=" { " />
+            <marker date="1468263249633" expanded="false" signature="553:559" ph=" }" />
+            <marker date="1468263249633" expanded="true" signature="682:885" ph="{...}" />
+            <marker date="1468263249633" expanded="true" signature="1056:1769" ph="{...}" />
+            <marker date="1468263249633" expanded="true" signature="1972:2532" ph="{...}" />
+            <marker date="1468263249633" expanded="true" signature="2744:3067" ph="{...}" />
+            <marker date="1468263249633" expanded="true" signature="3150:3511" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ro/teamnet/zth/api/em/EntityUtilsTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="129">
+          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding>
+            <marker date="1467993981995" expanded="false" signature="39:214" ph="..." />
+            <marker date="1467993981995" expanded="true" signature="299:462" ph="{...}" />
+            <marker date="1467993981995" expanded="true" signature="513:638" ph="{...}" />
+            <marker date="1467993981995" expanded="true" signature="723:830" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ro/teamnet/zth/appl/domain/Employee.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="349">
+          <caret line="98" column="17" selection-start-line="98" selection-start-column="17" selection-end-line="98" selection-end-column="17" />
+          <folding>
+            <marker date="1468264550905" expanded="false" signature="44:220" ph="..." />
+            <marker date="1468264550905" expanded="true" signature="222:435" ph="/**...*/" />
+            <marker date="1468264550905" expanded="false" signature="1207:1218" ph=" { " />
+            <marker date="1468264550905" expanded="false" signature="1228:1234" ph=" }" />
+            <marker date="1468264550905" expanded="false" signature="1269:1280" ph=" { " />
+            <marker date="1468264550905" expanded="false" signature="1293:1299" ph=" }" />
+            <marker date="1468264550905" expanded="false" signature="1333:1344" ph=" { " />
+            <marker date="1468264550905" expanded="false" signature="1361:1367" ph=" }" />
+            <marker date="1468264550905" expanded="false" signature="1415:1426" ph=" { " />
+            <marker date="1468264550905" expanded="false" signature="1453:1459" ph=" }" />
+            <marker date="1468264550905" expanded="false" signature="1492:1503" ph=" { " />
+            <marker date="1468264550905" expanded="false" signature="1519:1525" ph=" }" />
+            <marker date="1468264550905" expanded="false" signature="1571:1582" ph=" { " />
+            <marker date="1468264550905" expanded="false" signature="1607:1613" ph=" }" />
+            <marker date="1468264550905" expanded="false" signature="1643:1654" ph=" { " />
+            <marker date="1468264550905" expanded="false" signature="1667:1673" ph=" }" />
+            <marker date="1468264550905" expanded="false" signature="1713:1724" ph=" { " />
+            <marker date="1468264550905" expanded="false" signature="1743:1749" ph=" }" />
+            <marker date="1468264550905" expanded="false" signature="1785:1796" ph=" { " />
+            <marker date="1468264550905" expanded="false" signature="1815:1821" ph=" }" />
+            <marker date="1468264550905" expanded="false" signature="1873:1884" ph=" { " />
+            <marker date="1468264550905" expanded="false" signature="1915:1921" ph=" }" />
+            <marker date="1468264550905" expanded="false" signature="1952:1963" ph=" { " />
+            <marker date="1468264550905" expanded="false" signature="1979:1985" ph=" }" />
+            <marker date="1468264550905" expanded="false" signature="2029:2040" ph=" { " />
+            <marker date="1468264550905" expanded="false" signature="2065:2071" ph=" }" />
+            <marker date="1468264550905" expanded="false" signature="2101:2112" ph=" { " />
+            <marker date="1468264550905" expanded="false" signature="2125:2131" ph=" }" />
+            <marker date="1468264550905" expanded="false" signature="2171:2182" ph=" { " />
+            <marker date="1468264550905" expanded="false" signature="2201:2207" ph=" }" />
+            <marker date="1468264550905" expanded="false" signature="2242:2253" ph=" { " />
+            <marker date="1468264550905" expanded="false" signature="2267:2273" ph=" }" />
+            <marker date="1468264550905" expanded="false" signature="2319:2330" ph=" { " />
+            <marker date="1468264550905" expanded="false" signature="2351:2357" ph=" }" />
+            <marker date="1468264550905" expanded="false" signature="2399:2410" ph=" { " />
+            <marker date="1468264550905" expanded="false" signature="2431:2437" ph=" }" />
+            <marker date="1468264550905" expanded="false" signature="2497:2508" ph=" { " />
+            <marker date="1468264550905" expanded="false" signature="2543:2549" ph=" }" />
+            <marker date="1468264550905" expanded="false" signature="2584:2595" ph=" { " />
+            <marker date="1468264550905" expanded="false" signature="2612:2618" ph=" }" />
+            <marker date="1468264550905" expanded="false" signature="2667:2678" ph=" { " />
+            <marker date="1468264550905" expanded="false" signature="2705:2711" ph=" }" />
+            <marker date="1468264550905" expanded="false" signature="2749:2760" ph=" { " />
+            <marker date="1468264550905" expanded="false" signature="2780:2786" ph=" }" />
+            <marker date="1468264550905" expanded="false" signature="2841:2852" ph=" { " />
+            <marker date="1468264550905" expanded="false" signature="2885:2891" ph=" }" />
+            <marker date="1468264550905" expanded="true" signature="2943:4495" ph="{...}" />
+            <marker date="1468264550905" expanded="true" signature="4537:5402" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ro/teamnet/zth/api/em/EntityManagerImplTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="217">
+          <caret line="103" column="1" selection-start-line="103" selection-start-column="1" selection-end-line="113" selection-end-column="5" />
+          <folding>
+            <marker date="1468264782099" expanded="true" signature="39:433" ph="..." />
+            <marker date="1468264782099" expanded="true" signature="435:474" ph="/**...*/" />
+            <marker date="1468264782099" expanded="true" signature="598:807" ph="{...}" />
+            <marker date="1468264782099" expanded="true" signature="894:1109" ph="{...}" />
+            <marker date="1468264782099" expanded="true" signature="1200:1440" ph="{...}" />
+            <marker date="1468264782099" expanded="true" signature="1525:1967" ph="{...}" />
+            <marker date="1468264782099" expanded="true" signature="2081:2712" ph="{...}" />
+            <marker date="1468264782099" expanded="true" signature="2842:3454" ph="{...}" />
+            <marker date="1468264782099" expanded="true" signature="3538:3908" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ro/teamnet/zth/api/em/EntityManagerImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="709">
-          <caret line="122" column="0" selection-start-line="122" selection-start-column="0" selection-end-line="122" selection-end-column="0" />
+        <state relative-caret-position="345">
+          <caret line="271" column="13" selection-start-line="271" selection-start-column="13" selection-end-line="271" selection-end-column="13" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3467#3479#0" expanded="true" />
+            <marker date="1468265020805" expanded="true" signature="39:393" ph="..." />
+            <marker date="1468265020805" expanded="true" signature="395:434" ph="/**...*/" />
+            <marker date="1468265020805" expanded="true" signature="624:631" ph="{...}" />
+            <marker date="1468265020805" expanded="true" signature="703:2259" ph="{...}" />
+            <marker date="1468265020805" expanded="true" signature="2386:3042" ph="{...}" />
+            <marker date="1468265020805" expanded="true" signature="3158:4781" ph="{...}" />
+            <marker date="1468265020805" expanded="true" signature="3283:3295" ph="&lt;~&gt;" />
+            <marker date="1468265020805" expanded="true" signature="4871:6629" ph="{...}" />
+            <marker date="1468265020805" expanded="true" signature="6760:7984" ph="{...}" />
+            <marker date="1468265020805" expanded="true" signature="7248:7381" ph="//..." />
+            <marker date="1468265020805" expanded="true" signature="8114:9995" ph="{...}" />
+            <marker date="1468265020805" expanded="true" signature="10045:11904" ph="{...}" />
+            <marker date="1468265020805" expanded="true" signature="10255:10267" ph="&lt;~&gt;" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ro/teamnet/zth/appl/dao/DepartmentDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="327">
+          <caret line="56" column="11" selection-start-line="56" selection-start-column="11" selection-end-line="56" selection-end-column="11" />
+          <folding>
+            <marker date="1468265020710" expanded="true" signature="41:336" ph="..." />
+            <marker date="1468265020710" expanded="true" signature="338:378" ph="/**...*/" />
+            <marker date="1468265020710" expanded="true" signature="540:547" ph="{...}" />
+            <marker date="1468265020710" expanded="true" signature="597:660" ph="{...}" />
+            <marker date="1468265020710" expanded="true" signature="766:868" ph="{...}" />
+            <marker date="1468265020710" expanded="true" signature="991:1175" ph="{...}" />
+            <marker date="1468265020710" expanded="true" signature="1246:1347" ph="{...}" />
+            <marker date="1468265020710" expanded="true" signature="1480:1598" ph="{...}" />
+            <marker date="1468265020710" expanded="true" signature="1654:1664" ph=" { " />
+            <marker date="1468265020710" expanded="true" signature="1691:1697" ph=" }" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ro/teamnet/zth/appl/DepartmentDaoTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="103" column="0" selection-start-line="103" selection-start-column="0" selection-end-line="120" selection-end-column="0" />
+          <folding>
+            <marker date="1468265548458" expanded="true" signature="37:525" ph="..." />
+            <marker date="1468265548458" expanded="true" signature="527:567" ph="/**...*/" />
+            <marker date="1468265548458" expanded="true" signature="686:1165" ph="{...}" />
+            <marker date="1468265548458" expanded="true" signature="1255:1699" ph="{...}" />
+            <marker date="1468265548458" expanded="true" signature="1542:1627" ph="//..." />
+            <marker date="1468265548458" expanded="true" signature="1805:2481" ph="{...}" />
+            <marker date="1468265548458" expanded="true" signature="2567:3018" ph="{...}" />
+            <marker date="1468265548458" expanded="true" signature="3130:3880" ph="{...}" />
+            <marker date="1468265548458" expanded="true" signature="3532:3793" ph="//..." />
+            <marker date="1468265548458" expanded="true" signature="3964:4421" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../../../Jdbc/src/main/java/ro/teamnet/zth/api/em/EntityManagerImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
