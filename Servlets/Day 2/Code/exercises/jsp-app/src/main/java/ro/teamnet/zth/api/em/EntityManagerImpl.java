@@ -26,7 +26,7 @@ public class EntityManagerImpl implements EntityManager {
             //get columns
             List<ColumnInfo> columns = EntityUtils.getColumns(entity.getClass());
 
-            Integer lastId;
+            Integer lastId = null;
             //set values for columns
             for(ColumnInfo column : columns) {
                 if(column.isId()) {
@@ -173,8 +173,8 @@ public class EntityManagerImpl implements EntityManager {
             String sql = query.createQuery();
             ResultSet rs = stmt.executeQuery(sql);
 
-            T instance = entityClass.newInstance();
             while (rs.next()) {
+                T instance = entityClass.newInstance();
                 for (ColumnInfo column : columns) {
                     column.setValue(rs.getObject(column.getDbName()));
                     Field field = instance.getClass().getDeclaredField(column.getColumnName());
@@ -182,6 +182,7 @@ public class EntityManagerImpl implements EntityManager {
                     field.set(instance, EntityUtils.castFromSqlType(column.getValue(), column.getColumnType()));
                 }
                 rows.add(instance);
+
             }
             return rows;
         } catch (SQLException | ClassNotFoundException | NoSuchFieldException | IllegalAccessException | InstantiationException e) {

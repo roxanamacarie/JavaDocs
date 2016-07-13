@@ -16,9 +16,6 @@ import java.util.List;
 public class InfoHttpServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-//        String firstName = req.getParameter("firstName");
-//        String lastName = req.getParameter("lastName");
-
 
         String method = req.getMethod();
         String query = req.getQueryString();
@@ -48,13 +45,7 @@ public class InfoHttpServlet extends HttpServlet {
         }
         paramsTable.append("</table>");
 
-//        Cookie[] cookies = req.getCookies();
-//        StringBuilder cookieTable = new StringBuilder();
-//        cookieTable.append("<table><tr><th>Cookies: </th></tr>");
-//        for(Cookie ck:cookies){
-//            cookieTable.append("<tr><td>").append(ck).append("</td></tr>");
-//        }
-//        cookieTable.append("</table>");
+
 
         resp.getWriter().write(headerNamesTable.append(paramsTable).toString());
     }

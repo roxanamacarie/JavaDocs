@@ -10,6 +10,7 @@
  **/
 package ro.teamnet.zth.web;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -40,6 +41,14 @@ public class HelloWorldServlet extends HttpServlet {
 
         //Write the response content
         response.getWriter().write("Hello <b>" + user + "</b>");
+
+        RequestDispatcher requestDispatcher =
+                request.getRequestDispatcher("/url_for_the_HelloWorldServlet");
+
+        request.setAttribute("testAttribute", "Enjoy Z2H");
+
+        requestDispatcher.forward(request, response);
+
     }
 
 }
