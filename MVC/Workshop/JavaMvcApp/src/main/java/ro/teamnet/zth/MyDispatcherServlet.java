@@ -11,8 +11,10 @@
 package ro.teamnet.zth;
 
 import oracle.jdbc.proxy.annotation.Methods;
+import org.codehaus.jackson.map.ObjectMapper;
 import ro.teamnet.zth.api.annotations.MyController;
 import ro.teamnet.zth.api.annotations.MyRequestMethod;
+import ro.teamnet.zth.api.annotations.MyRequestParam;
 import ro.teamnet.zth.appl.controller.DepartmentController;
 import ro.teamnet.zth.appl.controller.EmployeeController;
 import ro.teamnet.zth.appl.domain.Department;
@@ -27,7 +29,10 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
+import java.lang.reflect.Parameter;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 
 /**
  * Hello World Servlet expose get method to say hello to input user
@@ -48,6 +53,11 @@ public class MyDispatcherServlet extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         //instructiuni de delegare
         dispatchReply("POST",req,resp);
+    }
+
+    @Override
+    protected void doDelete(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        dispatchReply("DELETE",req,resp);
     }
 
     @Override
@@ -76,6 +86,7 @@ public class MyDispatcherServlet extends HttpServlet {
                            methodAttributes.setControllerClass(controller.getName());
                            methodAttributes.setMethodType(myRequestMethodAnnotation.methodType());
                            methodAttributes.setMethodName(controllerMethod.getName());
+                           methodAttributes.setParameterTypes(controllerMethod.getParameterTypes());
 
                            //adaug in HashMap
                            allowedMethods.put(urlPath,methodAttributes);
@@ -116,7 +127,7 @@ public class MyDispatcherServlet extends HttpServlet {
 
     }
 
-    private Object dispatch(HttpServletRequest req, HttpServletResponse resp) {
+    private Object dispatch(HttpServletRequest req, HttpServletResponse resp) throws IOException {
 
 
         String path = req.getPathInfo();
@@ -133,6 +144,7 @@ public class MyDispatcherServlet extends HttpServlet {
         }
 
     */
+        String id = req.getParameter("id");
 
         //acum trebuie sa caut in registru
 
@@ -151,8 +163,21 @@ public class MyDispatcherServlet extends HttpServlet {
             try {
                 Class<?> controllerClass = Class.forName(controllerName);
                 Object controllerInstance = controllerClass.newInstance();
-                Method method = controllerClass.getMethod(methodAttributes.getMethodName());
-                Object result = method.invoke(controllerInstance);
+                Method method = controllerClass.getMethod(methodAttributes.getMethodName(),methodAttributes.getParameterTypes());
+                Parameter[] parameters =method.getParameters();
+                List<Object> parameterValues = new ArrayList<>();
+                for (Parameter parameter : parameters) {
+                    if(parameter.isAnnotationPresent(MyRequestParam.class)){
+                        MyRequestParam annotation = parameter.getAnnotation(MyRequestParam.class);
+                        String name= annotation.name();
+                        String requestParamValue = req.getParameter(name);
+                        Class<?> type = parameter.getType();
+                        Object requestParamObject =  new ObjectMapper().readValue(requestParamValue,type);
+                        parameterValues.add(requestParamObject);
+                    }
+                }
+
+                Object result = method.invoke(controllerInstance,parameterValues.toArray() );
 
                 return result;
 
@@ -174,7 +199,10 @@ public class MyDispatcherServlet extends HttpServlet {
 
     private void reply(Object r,HttpServletRequest req, HttpServletResponse resp) throws IOException {
 
-            resp.getWriter().write(r.toString());
+        ObjectMapper objectMapper = new ObjectMapper();
+        String valueAsString = objectMapper.writeValueAsString(r);
+            resp.getWriter().write(valueAsString);
+
 
     }
 
