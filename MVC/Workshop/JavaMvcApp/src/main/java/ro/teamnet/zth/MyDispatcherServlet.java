@@ -14,6 +14,7 @@ import oracle.jdbc.proxy.annotation.Methods;
 import org.codehaus.jackson.map.ObjectMapper;
 import ro.teamnet.zth.api.annotations.MyController;
 import ro.teamnet.zth.api.annotations.MyRequestMethod;
+import ro.teamnet.zth.api.annotations.MyRequestObject;
 import ro.teamnet.zth.api.annotations.MyRequestParam;
 import ro.teamnet.zth.appl.controller.DepartmentController;
 import ro.teamnet.zth.appl.controller.EmployeeController;
@@ -26,6 +27,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.io.BufferedReader;
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
@@ -47,6 +49,11 @@ public class MyDispatcherServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         //instructiuni de delegare
         dispatchReply("GET",req,resp);
+    }
+
+    @Override
+    protected void doPut(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        dispatchReply("PUT",req,resp);
     }
 
     @Override
@@ -91,6 +98,7 @@ public class MyDispatcherServlet extends HttpServlet {
                            //adaug in HashMap
                            allowedMethods.put(urlPath,methodAttributes);
                        }
+
                    }
 
                }
@@ -167,13 +175,27 @@ public class MyDispatcherServlet extends HttpServlet {
                 Parameter[] parameters =method.getParameters();
                 List<Object> parameterValues = new ArrayList<>();
                 for (Parameter parameter : parameters) {
+                    Class<?> type = parameter.getType();
                     if(parameter.isAnnotationPresent(MyRequestParam.class)){
                         MyRequestParam annotation = parameter.getAnnotation(MyRequestParam.class);
                         String name= annotation.name();
                         String requestParamValue = req.getParameter(name);
-                        Class<?> type = parameter.getType();
-                        Object requestParamObject =  new ObjectMapper().readValue(requestParamValue,type);
+
+                        Object requestParamObject;
+                        if(type.equals(String.class)){
+                            requestParamObject=requestParamValue;
+                        }
+                        else{
+                            requestParamObject =  new ObjectMapper().readValue(requestParamValue,type);
+                        }
+
                         parameterValues.add(requestParamObject);
+                    }
+                    else
+                    if(parameter.isAnnotationPresent(MyRequestObject.class)){
+                        BufferedReader requestBodyReader = req.getReader();
+                        Object requestObject= new ObjectMapper().readValue(requestBodyReader,type);
+                        parameterValues.add(requestObject);
                     }
                 }
 

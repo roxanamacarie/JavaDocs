@@ -1,3 +1,4 @@
+ro\teamnet\zth\appl\service\JobService.class
 ro\teamnet\zth\api\annotations\MyRequestParam.class
 ro\teamnet\zth\appl\service\EmployeeService.class
 ro\teamnet\zth\appl\controller\JobController.class
@@ -17,6 +18,7 @@ ro\teamnet\zth\api\annotations\Id.class
 ro\teamnet\zth\appl\dao\LocationDao.class
 ro\teamnet\zth\fmk\MethodAttributes.class
 ro\teamnet\zth\MyDispatcherServlet.class
+ro\teamnet\zth\appl\service\JobServiceImpl.class
 ro\teamnet\zth\api\annotations\MyRequestMethod.class
 ro\teamnet\zth\api\em\QueryBuilder.class
 ro\teamnet\zth\appl\domain\Location.class

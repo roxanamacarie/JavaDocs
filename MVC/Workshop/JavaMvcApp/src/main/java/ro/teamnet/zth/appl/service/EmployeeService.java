@@ -15,7 +15,5 @@ public interface EmployeeService {
     List<Employee> findAllEmployees();
     Employee findOneEmployee(Long id);
     void deleteOneEmployee(Long id);
-    List<Department> findAllDepartments();
-    List<Location> findAllLocations();
-    List<Job> findAllJobs();
+
 }

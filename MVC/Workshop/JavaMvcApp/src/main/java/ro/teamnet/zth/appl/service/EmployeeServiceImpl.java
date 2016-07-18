@@ -1,6 +1,5 @@
 package ro.teamnet.zth.appl.service;
 
-import ro.teamnet.zth.appl.controller.EmployeeController;
 import ro.teamnet.zth.appl.controller.JobController;
 import ro.teamnet.zth.appl.dao.EmployeeDao;
 import ro.teamnet.zth.appl.domain.Department;
@@ -13,6 +12,7 @@ import java.util.List;
 /**
  * Created by user on 7/15/2016.
  */
+
 public class EmployeeServiceImpl implements EmployeeService {
     @Override
     public List<Employee> findAllEmployees() {
@@ -34,24 +34,8 @@ public class EmployeeServiceImpl implements EmployeeService {
     @Override
     public void deleteOneEmployee(Long id) {
         EmployeeDao employeeDao = new EmployeeDao();
-       // Employee employee=employeeDao.getEmployeeById(id);
-      //  employeeDao.deleteEmployee(employee);
         employeeDao.deleteEmployee(employeeDao.getEmployeeById(id));
     }
 
-    @Override
-    public List<Department> findAllDepartments() {
-        return null;
-    }
 
-    @Override
-    public List<Location> findAllLocations() {
-        return null;
-    }
-
-    @Override
-    public List<Job> findAllJobs() {
-        JobController jobController = new JobController();
-        return jobController.getAllJobs();
-    }
 }
