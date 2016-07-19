@@ -25,6 +25,7 @@ public class EntityManagerImpl implements EntityManager {
             QueryBuilder queryBuilder = new QueryBuilder();
             queryBuilder.setQueryType(QueryType.SELECT).setTableName(tableName).addQueryColumns(tableColumn).addCondition(condition);
 
+
             T instance = null;
             ResultSet rs = statement.executeQuery(queryBuilder.createQuery());
             if (rs.next()) {
